@@ -46,6 +46,15 @@ const _importConf = () => {
     notify("Couldn't parse config file. Using default config instead.");
     userCfg = JSON.parse(defaultCfgRaw);
   }
+  if (userCfg.config?.fontWeight == 'light') {
+    userCfg.config.fontWeight = 400;
+  }
+  if (userCfg.config?.fontWeight == 'normal') {
+    userCfg.config.fontWeight = 500;
+  }
+  if (userCfg.config?.fontWeight == 'medium') {
+    userCfg.config.fontWeight = 600;
+  }
 
   return {userCfg, defaultCfg: _defaultCfg};
 };

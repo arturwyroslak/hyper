@@ -2,6 +2,7 @@ import {release} from 'os';
 
 import Immutable from 'seamless-immutable';
 import type {Immutable as ImmutableType} from 'seamless-immutable';
+import type {FontWeight} from 'xterm';
 
 import {CONFIG_LOAD, CONFIG_RELOAD} from '../../typings/constants/config';
 import {NOTIFICATION_MESSAGE, NOTIFICATION_DISMISS} from '../../typings/constants/notifications';
@@ -155,11 +156,11 @@ const reducer: IUiReducer = (state = initial, action) => {
             }
 
             if (config.fontWeight) {
-              ret.fontWeight = config.fontWeight;
+              ret.fontWeight = config.fontWeight as FontWeight;
             }
 
             if (config.fontWeightBold) {
-              ret.fontWeightBold = config.fontWeightBold;
+              ret.fontWeightBold = config.fontWeightBold as FontWeight;
             }
 
             if (Number.isFinite(config.lineHeight)) {

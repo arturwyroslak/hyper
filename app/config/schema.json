@@ -14,8 +14,10 @@
                         "700",
                         "800",
                         "900",
-                        "bold",
-                        "normal"
+                        "light",
+                        "normal",
+                        "medium",
+                        "bold"
                     ],
                     "type": "string"
                 },
