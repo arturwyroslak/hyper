@@ -1,4 +1,20 @@
-import type {FontWeight} from 'xterm';
+// import type {FontWeight} from 'xterm';
+
+type FontWeight =
+  | number
+  | 'light'
+  | 'normal'
+  | 'medium'
+  | 'bold'
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '500'
+  | '600'
+  | '700'
+  | '800'
+  | '900';
 
 export type ColorMap = {
   black: string;
